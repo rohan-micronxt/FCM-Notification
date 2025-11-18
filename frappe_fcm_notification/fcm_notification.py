@@ -129,7 +129,6 @@ def send_fcm_notification(notification,device_token): #Add device token #add doc
         "message": {
             "token": device_token,
             
-
         "android": {
             "notification": {
                 "sound":"cash_notification.wav"
@@ -143,6 +142,8 @@ def send_fcm_notification(notification,device_token): #Add device token #add doc
             }
         },
             "data": {
+                "title": title,
+                "body": body,
                 "doctype": notification.document_type,
                 "docname": str(notification.document_name),
             }
